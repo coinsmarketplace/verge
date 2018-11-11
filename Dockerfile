@@ -13,10 +13,11 @@ RUN add-apt-repository -y ppa:bitcoin/bitcoin \
 
 WORKDIR /verge
 
-RUN git clone https://github.com/vergecurrency/VERGE /verge && \
-    ./autogen.sh && \
-    ./configure && \
-    make
+RUN git clone https://github.com/vergecurrency/VERGE /verge \
+    && git checkout 4.0.2a \
+    && ./autogen.sh \
+    && ./configure \
+    && make
 
 RUN chmod 0777 /verge/src/* \
  ln /verge/src/VERGEd /usr/local/bin/VERGEd
