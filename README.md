@@ -1,1 +1,1 @@
-# verge
+# VERGE currency image
