@@ -19,8 +19,7 @@ RUN git clone https://github.com/vergecurrency/VERGE /verge \
     && ./configure \
     && make
 
-RUN chmod 0777 /verge/src/* \
- ln /verge/src/VERGEd /usr/local/bin/VERGEd
+RUN ln /verge/src/VERGEd /usr/local/bin/VERGEd
 
 EXPOSE 21102 20102
 
